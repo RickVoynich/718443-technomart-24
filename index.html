@@ -12,10 +12,10 @@
       <a class="main-header-logo">
         <img class="svg-img logo-technomart" src="img/logo-technomart.svg" alt="Логотип интернет-магазина «Техномарт»">
       </a>
-      <span>
+      <form action="https://echo.htmlacademy.ru" method="get">
         <img class="svg-img icon icon-search" src="img/icon-search.svg" alt="">
-        Поиск
-      </span>
+        <input type="search" placeholder="Поиск:">
+      </form>
       <a href="bookmark.html">
         <img class="svg-img icon icon-bookmark" src="img/icon-bookmark.svg" alt="">
         Закладки:0
@@ -24,7 +24,7 @@
         <img class="svg-img icon icon-cart" src="img/icon-cart.svg" alt="">
         Корзина:0
       </a>
-      <a href="to-order">Оформить заказ</a>
+      <a href="to-order.html">Оформить заказ</a>
     </div>
     <div class="header-middle">
       <h1>Интернет-магазин
@@ -39,10 +39,14 @@
       </div>
       <ul class="user-navigation">
         <li class="login-link">
-          <img src="img/icon-login.svg" alt="">
-          Войти
+          <a class="button" href="login.html">
+            <img src="img/icon-login.svg" alt="">
+            Войти
+          </a>
         </li>
-        <li class="register-link">Регистрация</li>
+        <li class="register-link">
+          <a class="button" href="register.html">Регистрация</a>
+        </li>
       </ul>
     </div>
     <nav class="main-navigation header-bottom">
@@ -60,7 +64,7 @@
 
   <main class="container">
     <section>
-      <h2 class="visually-hidden">Популярные ссылки:</h2>
+      <h2 class="visually-hidden">Промо-блок</h2>
       <div>
         <span>Материалы</span>
         <a class="button" href="material.html">На любой вкус</a>
@@ -81,10 +85,28 @@
         <span>Доставка</span>
         <a class="button" href="delivery.html">Бесплатно</a>
       </div>
+    </section>
+
+    <section class="slider">
+      <h2 class="visually-hidden">Промо-слайды</h2>
+      <label for="slider-1"></label>
+      <input type="radio" name="slider" id="slider-1">
       <div>
-        <!-- slider -->
+        <p class="slider-title">Перфораторы</p>
+        <p>Настоящие мужские игрушки</p>
+        <img class="slider-img" src="img/slider-1.jpg" alt="">
+        <a href="catalog.html">Открыть каталог</a>
+      </div>
+      <label for="slider-2"></label>
+      <input type="radio" name="slider" id="slider-2" checked>
+      <div>
+        <p class="slider-title">Дрели</p>
+        <p>Соседям на радость</p>
+        <img class="slider-img" src="img/slider-2.jpg" alt="">
+        <a href="catalog.html">Открыть каталог</a>
       </div>
     </section>
+
     <section class="popular-product">
       <h2>Популярные товары:</h2>
       <a class="button" href="popular-product.html">Все поплулярные товары</a>
@@ -154,7 +176,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/bosch.html">
-            <img class="jpg-img brand" src="img/bosch.jpg" alt="Bosch">
+            <img class="jpg-img brand" src="img/bosch.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -164,7 +186,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/makita.html">
-            <img class="jpg-img brand" src="img/makita.jpg" alt="Makita">
+            <img class="jpg-img brand" src="img/makita.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -174,7 +196,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/dewalt.html">
-            <img class="jpg-img brand" src="img/dewalt.jpg" alt="Dewalt">
+            <img class="jpg-img brand" src="img/dewalt.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -184,7 +206,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/interskol.html">
-            <img class="jpg-img brand" src="img/interskol.jpg" alt="Интерскол">
+            <img class="jpg-img brand" src="img/interskol.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -194,7 +216,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/hitachi.html">
-            <img class="jpg-img brand" src="img/hitachi.jpg" alt="Hitachi">
+            <img class="jpg-img brand" src="img/hitachi.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -204,7 +226,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/lg.html">
-            <img class="jpg-img brand" src="img/lg.jpg" alt="Lg">
+            <img class="jpg-img brand" src="img/lg.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -214,7 +236,7 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/aeg.html">
-            <img class="jpg-img brand" src="img/aeg.jpg" alt="Aeg">
+            <img class="jpg-img brand" src="img/aeg.jpg" alt="">
           </a>
         </li>
         <li class="brand">
@@ -224,12 +246,13 @@
             </a>
           </h3>
           <a class="brand-image" href="brand/metabo.html">
-            <img class="jpg-img brand" src="img/metabo.jpg" alt="Metabo">
+            <img class="jpg-img brand" src="img/metabo.jpg" alt="">
           </a>
         </li>
       </ul>
     </section>
     <section class="service">
+       <!--Блок «Сервисы»: слайдер -->
       <h2>Сервисы</h2>
       <p>Хороший Интернет-магазин отличается от плохого не только ценами!
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
@@ -251,6 +274,7 @@
       <span>Кредит</span>
       <p>Залезть в долговую яму стало проще!<br>
         Кредитные консультанты придут вам на помощь.</p>
+      <button type="submit">Отправить заявку</button>
     </section>
     <section class="information">
       <div class="left-block">
@@ -271,10 +295,42 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p><br>
         <a class="main-mini-map">
-          <img class="png-img mini-map" src="img/mini-map.png" alt="Карта офиса по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
+          <img class="png-img mini-map" src="img/mini-map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </a>
-        <a class="button" href="contacts.html">Заблудились? Напишите нам!</a>
+        <button>Заблудились? Напишите нам!</button>
       </div>
+    </section>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Местоположение компании</h2>
+      <img src="img/map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <button type="submit">
+        <img class="modal-close" src="img/close.svg" alt="Закрыть">
+      </button>
+    </section>
+
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-mail">Ваш e-mail:</label>
+          <input id="user-mail" type="email" name="user-mail" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="text-mail">Текст письма:</label>
+          <textarea id="text-mail" name="text-mail" cols="60" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">
+          Отправить
+        </button>
+      </form>
+      <button type="button">
+        <img class="modal-close" src="img/close.svg" alt="Закрыть">
+      </button>
     </section>
   </main>
 
@@ -311,17 +367,17 @@
       <ul class="footer-social">
         <li>
           <a class="social-button" href="#">
-            <img class="svg-img icon icon-vk" src="img/icon-vk.svg" alt="Вконтакте">
+            <img class="svg-img icon icon-vk" src="img/icon-vk.svg" alt="Техномарт во Вконтакте">
           </a>
         </li>
         <li>
           <a class="social-button" href="#">
-            <img class="svg-img icon icon-fb" src="img/icon-fb.svg" alt="Фейсбук">
+            <img class="svg-img icon icon-fb" src="img/icon-fb.svg" alt="Техномарт на Фейсбук">
           </a>
         </li>
         <li>
           <a class="social-button" href="#">
-            <img class="svg-img icon icon-insta" src="img/icon-insta.svg" alt="Инстаграм">
+            <img class="svg-img icon icon-insta" src="img/icon-insta.svg" alt="Техномарт в Инстаграм">
           </a>
         </li>
       </ul>
@@ -331,7 +387,7 @@
       </p>
       <p class="footer-copyright">
         Разработано -
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
       </p>
     </div>
   </footer>

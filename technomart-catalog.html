@@ -13,17 +13,10 @@
         <img class="svg-img logo-technomart" src="img/logo-technomart.svg" alt="Логотип интернет-магазина «Техномарт»">
       </a>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <img class="svg-img icon icon-search" src="img/icon-search.svg" alt="">
         <input type="search" placeholder="Поиск:">
       </form>
-      <a href="bookmark.html">
-        <img class="svg-img icon icon-bookmark" src="img/icon-bookmark.svg" alt="">
-        Закладки:0
-      </a>
-      <a href="cart.html">
-        <img class="svg-img icon icon-cart" src="img/icon-cart.svg" alt="">
-        Корзина:10
-      </a>
+      <a href="bookmark.html">Закладки:0</a>
+      <a href="cart.html">Корзина:10</a>
       <a href="to-order.html">Оформить заказ</a>
     </div>
     <div class="header-middle">
@@ -31,20 +24,12 @@
         строительных материалов
         и инструментов для ремонта</h1>
       <div class="header-contacts">
-        <a href="tel:+78125550555">
-          <img class="svg-img icon icon-phone" src="img/icon-phone.svg" alt="">
-          +7(812)555-05-55
-        </a>
+        <a href="tel:+78125550555">+7(812)555-05-55</a>
         г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
       </div>
       <div class="user-panel">
-        <a class="user-account-button" href="user-account.html">
-          <img class="svg-img icon icon-user" src="img/icon-user.svg" alt="">
-          Равшан Джамшутович
-        </a>
-        <a class="user-logout-button" href="logout.html">
-          <img class="svg-img icon icon-logout" src="img/icon-logout.svg" alt="Выйти">
-        </a>
+        <a class="user-account-button" href="user-account.html">Равшан Джамшутович</a>
+        <a class="user-logout-button" href="logout.html">Выйти</a>
         <a class="user-navigation" href="user-order.html">Мои заказы</a>
         <a class="user-navigation" href="user-lk.html">Личный кабинет</a>
       </div>
@@ -65,27 +50,16 @@
   <main class="container">
     <ul class="breadcrumbs">
       <li>
-        <a class="breadcrumbs-item" href="index.html">
-          <img class="svg-img icon icon-home" src="img/icon-home.svg" alt="Главная">
-        </a>
+        <a class="breadcrumbs-item" href="index.html">Главная</a>
       </li>
       <li>
-        <a class="breadcrumbs-item" href="catalog.html">
-          <img class="svg-img icon icon-right-small" src="img/icon-right-small.svg" alt="">
-          Каталог
-        </a>
+        <a class="breadcrumbs-item" href="catalog.html">Каталог</a>
       </li>
       <li>
-        <a class="breadcrumbs-item" href="tool.html">
-          <img class="svg-img icon icon-right-small" src="img/icon-right-small.svg" alt="">
-          Инструмент
-        </a>
+        <a class="breadcrumbs-item" href="tool.html">Инструмент</a>
       </li>
       <li>
-        <a class="breadcrumbs-item" href="hammer-drill.html">
-          <img class="svg-img icon icon-right-small" src="img/icon-right-small.svg" alt="">
-          Перфораторы
-        </a>
+        <a class="breadcrumbs-item" href="hammer-drill.html">Перфораторы</a>
       </li>
     </ul>
     <h2 class="product-types">Перфораторы</h2>
@@ -103,37 +77,37 @@
           <legend>Производители:</legend>
           <ul class="brands">
             <li>
-              <input type="checkbox" name="brands" id="bosch" checked>
+              <input type="checkbox" name="brands" id="bosch" value="bosch" checked>
               <label for="bosch">Bosch</label>
             </li>
             <li>
-              <input type="checkbox" name="brands" id="interskol">
+              <input type="checkbox" name="brands" id="interskol" value="interskol">
               <label for="interskol">Interskol</label>
             </li>
             <li>
-              <input type="checkbox" name="brands" id="makita" checked>
+              <input type="checkbox" name="brands" id="makita" value="makita" checked>
               <label for="makita">Makita</label>
             </li>
             <li>
-              <input type="checkbox" name="brands" id="dewalt">
+              <input type="checkbox" name="brands" id="dewalt" value="dewalt">
               <label for="dewalt">Dewalt</label>
             </li>
             <li>
-              <input type="checkbox" name="brands" id="hitachi">
+              <input type="checkbox" name="brands" id="hitachi" value="hitachi">
               <label for="hitachi">Hitachi</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
           <legend>Питание:</legend>
-          <ul class="power-types">
+          <ul class="power-type">
             <li>
-              <input type="radio" name="power-types" id="type-1" checked>
-              <label for="type-1">Аккумуляторные</label>
+              <input type="radio" name="power-type" id="cordless" value="cordless" checked>
+              <label for="cordless">Аккумуляторные</label>
             </li>
             <li>
-              <input type="radio" name="power-types" id="type-2">
-              <label for="type-2">Сетевые</label>
+              <input type="radio" name="power-type" id="corded" value="corded">
+              <label for="corded">Сетевые</label>
             </li>
           </ul>
         </fieldset>
@@ -145,12 +119,22 @@
       <fieldset>
         <legend>Сортировка:</legend>
         <ul class="sorting">
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По функционалу</li>
+          <li>
+            <a>По цене</a>
+          </li>
+          <li>
+            <a>По типу</a>
+          </li>
+          <li>
+            <a>По функционалу</a>
+          </li>
+          <li>
+            <a>По возрастанию</a>
+          </li>
+          <li>
+            <a>По убыванию</a>
+          </li>
         </ul>
-        <input type="image" src="img/icon-up-dir.svg" alt="Сортировать по возрастанию">
-        <input type="image" src="img/icon-down-dir.svg" alt="Сортировать по убыванию">
       </fieldset>
       <h2 class="visually-hidden">Список перфораторов</h2>
       <ul class="catalog-list">
@@ -340,19 +324,13 @@
       </p>
       <ul class="footer-social">
         <li>
-          <a class="social-button" href="#">
-            <img class="svg-img icon icon-vk" src="img/icon-vk.svg" alt="Техномарт во Вконтакте">
-          </a>
+          <a class="social-button vk" href="#">Техномарт во Вконтакте</a>
         </li>
         <li>
-          <a class="social-button" href="#">
-            <img class="svg-img icon icon-fb" src="img/icon-fb.svg" alt="Техномарт на Фейсбук">
-          </a>
+          <a class="social-button fb" href="#">Техномарт на Фейсбук</a>
         </li>
         <li>
-          <a class="social-button" href="#">
-            <img class="svg-img icon icon-insta" src="img/icon-insta.svg" alt="Техномарт в Инстаграм">
-          </a>
+          <a class="social-button insta" href="#">Техномарт в Инстаграм</a>
         </li>
       </ul>
       <p class="footer-contacts">

@@ -10,7 +10,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
   <header class="main-header">
     <div class="header-top">
       <a class="main-header-logo" href="index.html">
@@ -19,9 +19,9 @@
       <form action="https://echo.htmlacademy.ru" method="get">
         <input type="search" placeholder="Поиск:">
       </form>
-      <a href="bookmark.html">Закладки:0</a>
-      <a href="cart.html">Корзина:10</a>
-      <a href="to-order.html">Оформить заказ</a>
+      <a class="bookmark" href="bookmark.html">Закладки: 0</a>
+      <a class="cart" href="cart.html">Корзина: 10</a>
+      <button class="to-order">Оформить заказ</button>
     </div>
     <div class="header-middle">
       <h1>Интернет-магазин
@@ -31,12 +31,13 @@
         <a href="tel:+78125550555">+7(812)555-05-55</a>
         г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8
       </div>
-      <div class="user-panel">
-        <a class="user-account-button" href="user-account.html">Равшан Джамшутович</a>
+      <div class="user-navigation">
+        <a class="user-account-button" href="user-account.html">Равшан
+          Джамшутович</a>
         <a class="user-logout-button" href="logout.html">Выйти</a>
-        <a class="user-navigation" href="user-order.html">Мои заказы</a>
-        <a class="user-navigation" href="user-lk.html">Личный кабинет</a>
       </div>
+      <a class="user-order" href="user-order.html">Мои заказы</a>
+      <a class="user-lk" href="user-lk.html">Личный кабинет</a>
     </div>
     <nav class="main-navigation header-bottom">
       <ul class="site-navigation">
@@ -66,16 +67,15 @@
         <a class="breadcrumbs-item" href="hammer-drill.html">Перфораторы</a>
       </li>
     </ul>
-    <h2 class="product-types">Перфораторы</h2>
+    <h2>Перфораторы</h2>
     <section class="filters">
-
       <form class="filter" method="get" action="https://echo.htmlacademy.ru">
         <h3>Фильтр</h3>
         <fieldset>
           <legend>Цена:</legend>
-          <input type="range" min="0" max="30000" step="100">
-          <output name="price-min">0</output>
-          <output name="price-max">30000</output>
+          <input class="price-filter" type="range" min="0" max="30000" step="100">
+          <output class="price-filter" name="price-min">0</output>
+          <output class="price-filter" name="price-max">30000</output>
         </fieldset>
         <fieldset>
           <legend>Производители:</legend>
@@ -115,28 +115,28 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="filter" type="submit">Показать</button>
       </form>
     </section>
 
     <section class="catalog">
       <fieldset>
         <legend>Сортировка:</legend>
-        <ul class="sorting">
+        <ul>
           <li>
-            <a>По цене</a>
+            <a class="sorting">По цене</a>
           </li>
           <li>
-            <a>По типу</a>
+            <a class="sorting">По типу</a>
           </li>
           <li>
-            <a>По функционалу</a>
+            <a class="sorting">По функционалу</a>
           </li>
           <li>
-            <a>По возрастанию</a>
+            <a class="sorting">По возрастанию</a>
           </li>
           <li>
-            <a>По убыванию</a>
+            <a class="sorting">По убыванию</a>
           </li>
         </ul>
       </fieldset>
@@ -148,7 +148,7 @@
             <img class="jpg-img product" src="img/product-1.jpg" alt="Перфоратор Bosch bfg 3000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-1.html">
               <span class="catalog-category">Перфоратор</span>
@@ -163,7 +163,7 @@
             <img class="jpg-img product" src="img/product-2.jpg" alt="Перфоратор Bosch bfg 6000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-2.html">
               <span class="catalog-category">Перфоратор</span>
@@ -175,7 +175,7 @@
         </li>
         <li class="catalog-item">
           <a class="catalog-item-bay button" href="#">Купить</a>
-          <a class="catalog-item-whishlist button" href="#">В закладки</a>
+          <a class="catalog-item-bookmark button" href="#">В закладки</a>
           <!-- <a class="catalog-item-image" href="catalog-item/product-3.html">
                 <img class="jpg-img product" src="img/product-3.jpg" alt="Перфоратор Bosch bfg 2000">
               </a> -->
@@ -192,7 +192,7 @@
             <img class="jpg-img product" src="img/product-1.jpg" alt="Перфоратор Bosch bfg 3000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-1.html">
               <span class="catalog-category">Перфоратор</span>
@@ -207,7 +207,7 @@
             <img class="jpg-img product" src="img/product-2.jpg" alt="Перфоратор Bosch bfg 6000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-2.html">
               <span class="catalog-category">Перфоратор</span>
@@ -223,7 +223,7 @@
             <img class="jpg-img product" src="img/product-3.jpg" alt="Перфоратор Bosch bfg 2000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-3.html">
               <span class="catalog-category">Перфоратор</span>
@@ -237,7 +237,7 @@
             <img class="jpg-img product" src="img/product-1.jpg" alt="Перфоратор Bosch bfg 3000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-1.html">
               <span class="catalog-category">Перфоратор</span>
@@ -252,7 +252,7 @@
             <img class="jpg-img product" src="img/product-2.jpg" alt="Перфоратор Bosch bfg 6000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-2.html">
               <span class="catalog-category">Перфоратор</span>
@@ -267,7 +267,7 @@
             <img class="jpg-img product" src="img/product-3.jpg" alt="Перфоратор Bosch bfg 2000">
           </a>
           <!-- <button type="button" class="catalog-item-bay button">Купить</button>
-          <button type="button" class="catalog-item-whishlist button">В закладки</button> -->
+          <button type="button" class="catalog-item-bookmark button">В закладки</button> -->
           <h4>
             <a href="catalog-item/product-3.html">
               <span class="catalog-category">Перфоратор</span>
@@ -278,7 +278,7 @@
         </li>
       </ul>
       <ul class="pagination-list">
-        <li class="pagination-itempa gination-item-current"><a>1</a></li>
+        <li class="pagination-item pagination-item-current"><a>1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">Следующая</a></li>

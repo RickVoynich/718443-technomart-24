@@ -1,3 +1,4 @@
+/* general */
 body {
   margin: 0;
   padding: 0;
@@ -6,10 +7,10 @@ body {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
-  color: rgb(0, 0, 0);
+  color: #000;
   text-transform: none;
 
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
 }
 
 a {
@@ -17,180 +18,38 @@ a {
 }
 
 button {
-  font: inherit;
-
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
   text-align: center;
-  color: rgb(255, 255, 255);
   vertical-align: middle;
+  color: #fff;
 
-  background-color: rgb(0, 0, 0);
+  background-color: #ee3643;
   border: none;
 }
 
+button:hover,
+button:focus {
+  background-color: #ca2c37;
+}
+
+button:active {
+  background-color: #ba2732;
+}
+
 .logo-technomart {
-  background-color: rgb(238, 54, 67);
+  background-color: #ee3643;
 }
 
 .logo-technomart:hover,
 .logo-technomart:focus {
-    background-color: rgb(202, 44, 55);
+  background-color: #ca2c37;
 }
 
 .logo-technomart:active {
-    background-color: rgb(186, 39, 50);
-}
-
-header {
-  font-family: "Cuprum", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  color: rgb(0, 0, 0);
-
-  background-color: rgb(241, 245, 247);
-}
-
-.header-top {
-  line-height: 18px;
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(50, 66, 92);
-}
-
-.header-top input {
-  font: inherit;
-
-  background-color: transparent;
-  border: none;
-}
-
-.header-top input:hover {
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(41, 52, 73);
-}
-
-.header-top input:focus {
-  color: rgb(0, 0, 0);
-
-  background-color: rgb(255, 255, 255);
-}
-
-.header-top a {
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(50, 66, 92);
-}
-
-.bookmark:hover,
-.bookmark:focus,
-.cart:hover,
-.cart:focus {
-  color: rgba(255, 255, 255, 1);
-
-  background-color: rgb(41, 52, 73);
-}
-
-.bookmark:active,
-.cart:active {
-  color: rgba(255, 255, 255, 0.6);
-
-  background-color: rgb(33, 42, 58);
-}
-
-.to-order {
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(99, 166, 62);
-}
-
-.to-order:hover,
-.to-order:focus {
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(95, 187, 45);
-}
-
-.to-order:active {
-  color: rgba(255, 255, 255, 0.6);
-
-  background-color: rgb(81, 1337, 52);
-}
-
-.header-middle h1 {
-  font-size: 16px;
-  line-height: 23px;
-  font-style: italic;
-  font-weight: 400;
-  text-align: left;
-  color: rgb(238, 54, 67);
-}
-
-.header-contacts {
-  font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  color: rgb(50, 66, 92);
-}
-
-.header-contacts a {
-  font-size: 21px;
-  line-height: 21px;
-  text-align: left;
-  color: rgb(238, 54, 67);
-
-  border: 3px solid rgb(255, 255, 255);
-}
-
-.main-site-navigation,
-.user-navigation {
-  list-style: none;
-}
-
-.user-navigation a {
-  font-size: 21px;
-  line-height: 21px;
-  text-align: left;
-  color: rgb(0, 0, 0);
-
-  background-color: rgb(255, 255, 255);
-}
-
-.user-navigation a:hover,
-.user-navigation a:focus {
-  color: rgb(238, 54, 67);
-}
-
-.user-navigation a:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.main-navigation {
-  font-family: "Cuprum", sans-serif;
-  font-size: 17px;
-  line-height: 17px;
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(50, 66, 92);
-}
-
-.main-site-navigation a {
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(50, 66, 92);
-}
-
-.main-site-navigation a:hover,
-.main-site-navigation a:focus {
-  color: rgba(255, 255, 255, 1);
-
-  background-color: rgb(41, 52, 73);
-}
-
-.main-site-navigation a:active {
-  color: rgba(255, 255, 255, 0.6);
-
-  background-color: rgb(33, 42, 58);
+  background-color: #ba2732;
 }
 
 .visually-hidden {
@@ -205,8 +64,387 @@ header {
   display: none;
 }
 
-/* категории товаров, слайды, популярные товары и бренды */
+/* general end */
 
+/* header */
+header {
+  font-family: "Cuprum", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000;
+
+  background-color: #f1f5f7;
+}
+
+.header-top {
+  color: #fff;
+
+  background-color: #32425c;
+}
+
+.header-top input {
+  font: inherit;
+
+  background-color: transparent;
+  border: none;
+}
+
+.header-top input:hover {
+  color: #fff;
+
+  background-color: #293449;
+}
+
+.header-top input:focus {
+  color: #000;
+
+  background-color: #fff;
+}
+
+.header-top a {
+  color: #fff;
+
+  background-color: #32425c;
+}
+
+.bookmark:hover,
+.bookmark:focus,
+.cart:hover,
+.cart:focus {
+  color: #fff;
+
+  background-color: #293449;
+}
+
+.bookmark:active,
+.cart:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #1d2739;
+}
+
+.to-order {
+  color: #fff;
+
+  background-color: #63a63e;
+}
+
+.to-order:hover,
+.to-order:focus {
+  color: #fff;
+
+  background-color: #5fbb2d;
+}
+
+.to-order:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #518534;
+}
+
+.header-middle h1 {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: left;
+  color: #ee3643;
+}
+
+.header-contacts {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #32425c;
+}
+
+.header-contacts a {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: left;
+  color: #ee3643;
+
+  border: 3px solid #fff;
+}
+
+.main-site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.user-navigation a {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: left;
+  color: #000;
+
+  background-color: #fff;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #ee3643;
+}
+
+a.user-account-button:hover,
+a.user-logout-button:hover,
+a.user-account-button:focus,
+a.user-logout-button:focus {
+  color: #000;
+}
+
+.user-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-order,
+.user-lk {
+  font-size: 17px;
+  line-height: 18px;
+  text-align: left;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user-order:hover,
+.user-lk:hover,
+.user-order:focus,
+.user-lk:focus {
+  color: #ee3643;
+}
+
+.user-order:active,
+.user-lk:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+.main-navigation {
+  font-family: "Cuprum", sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #fff;
+
+  background-color: #32425c;
+}
+
+.main-site-navigation a {
+  color: #fff;
+
+  background-color: #32425c;
+}
+
+.main-site-navigation a:hover,
+.main-site-navigation a:focus {
+  color: #fff;
+
+  background-color: #293449;
+}
+
+.main-site-navigation a:active {
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #1d2739;
+}
+
+/* header end */
+
+/* main */
+
+.category-material,
+.category-delivery {
+  background-color: #ffbf47;
+}
+
+.category-tool {
+  background-color: #3bbce3;
+}
+
+.category-mechanism {
+  background-color: #dc91d8;
+}
+
+.category-special {
+  background-color: #8ed78f;
+}
+
+span {
+  font-family: "Cuprum", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: #fff;
+}
+
+.button {
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.promo-slider h4 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.promo-slider p {
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  color: #fff;
+}
+
+.promo-slider a {
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+
+  background-color: #ee3643;
+}
+
+h2 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+h2.popular {
+  color: #32425c;
+
+  background-color: #f1f5f7;
+}
+
+a.popular {
+  font-family: "Cuprum", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+
+  background-color: #ee3643;
+}
+
+.popular-product-item,
+.brand,
+.catalog-item {
+  list-style: none;
+
+  border: 1px solid #eaeaea;
+}
+
+.catalog-category {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.price-older {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: line-through;
+  text-transform: uppercase;
+  text-align: center;
+  color: #a9a9a9;
+}
+
+.price {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+
+  background-color: #ee3643;
+}
+
+img.brand {
+  border: none;
+}
+
+.service {
+  color: #000;
+
+  background-color: #f1f5f7;
+}
+
+.service h2 {
+  color: #000;
+}
+
+.service li {
+  font-family: "Cuprum", sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: left;
+  list-style: none;
+  color: #32425c;
+
+  background-color: #fff;
+  border: none;
+}
+
+.service li:hover,
+.service li:focus {
+  color: #fff;
+
+  background-color: #32425c;
+}
+
+.service li:active {
+  color: #fff;
+
+  background-color: #293449;
+}
+
+.service h4 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: left;
+  color: #32425c;
+}
 
 .information h2 {
   font-family: "Cuprum", sans-serif;
@@ -214,14 +452,12 @@ header {
   line-height: 30px;
   text-transform: uppercase;
   text-align: left;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .information p {
-  font-size: 18px;
-  line-height: 20px;
   text-align: left;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .information ul {
@@ -229,7 +465,7 @@ header {
   font-size: 18px;
   line-height: 20px;
   text-align: left;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .left-block a {
@@ -238,9 +474,9 @@ header {
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: #fff;
 
-  background-color: rgb(238, 54, 67);
+  background-color: #ee3643;
 }
 
 .right-block button {
@@ -249,19 +485,202 @@ header {
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: #fff;
 
-  background-color: rgb(238, 54, 67);
+  background-color: #ee3643;
 }
 
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.inner-page h2 {
+  color: #32425c;
+
+  background-color: #f1f5f7;
+}
+
+.inner-page h3 {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000;
+
+  background-color: #f7f3ec;
+}
+
+fieldset {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+fieldset ul {
+  list-style: none;
+}
+
+legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.price-filter {
+  background-color: #f7f3ec;
+}
+
+button.filter {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+}
+
+.catalog fieldset {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000;
+
+  background-color: #f7f3ec;
+}
+
+.catalog legend {
+  font: inherit;
+}
+
+a.sorting:hover,
+a.sorting:focus {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+  text-decoration-color: #ee3643;
+  text-decoration-style: dotted;
+}
+
+a.sorting:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+ul.catalog-list {
+  list-style: none;
+}
+
+.catalog-item a {
+  font-family: "Cuprum"sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.catalog-item-bay {
+  color: #fff;
+
+  background-color: #63a63e;
+}
+
+.catalog-item-bay:hover,
+.catalog-item-bay:focus {
+  background-color: #57bb2d;
+}
+
+.catalog-item-bay:active {
+  background-color: #518534;
+}
+
+.catalog-item-bookmark {
+  color: #32425c;
+
+  background-color: transparent;
+  border: 3px solid #63a63e;
+}
+
+.catalog-item-bookmark:hover,
+.catalog-item-bookmark:focus {
+  color: #32425c;
+
+  background-color: transparent;
+  border: 3px solid #32425c;
+}
+
+.catalog-item-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+
+  background-color: transparent;
+  border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+
+  border: 1px solid #e5e5e5;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border: 1px solid #bdc6ca;
+}
+
+.pagination-item a:active {
+  border: 1px solid #ee3643;
+}
+
+.pagination-item-current a {
+  color: #fff;
+
+  background-color: #ee3643;
+  border: none;
+}
+
+.other-info {
+  color: #000;
+
+  background-color: #f1f5f7;
+}
+
+h5 {
+  font-family: "Cuprum", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* main end */
+
+/* footer */
 footer {
   font-family: "Cuprum", sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-align: left;
-  color: rgb(243, 247, 249);
+  color: #f3f7f9;
 
-  background-color: rgb(50, 66, 92);
+  background-color: #32425c;
 }
 
 .site-navigation,
@@ -270,15 +689,15 @@ footer {
 }
 
 .site-navigation a {
-  color: rgb(243, 247, 249);
+  color: #f3f7f9;
 
-  background-color: rgb(50, 66, 92);
+  background-color: #32425c;
 }
 
 .catalog-navigation a {
-  color: rgb(255, 209, 128);
+  color: #ffda96;
 
-  background-color: rgb(50, 66, 92);
+  background-color: #32425c;
 }
 
 .site-navigation a:hover,
@@ -292,14 +711,14 @@ footer {
   text-decoration: none;
   color: rgba(243, 247, 249, 0.5);
 
-  background-color: rgb(50, 66, 92);
+  background-color: #32425c;
 }
 
 .catalog-navigation a:active {
   text-decoration: none;
-  color: rgba(255, 209, 128, 0.5);
+  color: rgba(255, 218, 150, 0.5);
 
-  background-color: rgb(50, 66, 92);
+  background-color: #32425c;
 }
 
 .footer-bottom {
@@ -307,18 +726,18 @@ footer {
   font-size: 16px;
   line-height: 18px;
   text-align: left;
-  color: rgb(255, 255, 255);
+  color: #fff;
 
-  background-color: rgb(41, 52, 73);
+  background-color: #293449;
 }
 
 /* иконки соц.сетей */
 
 .footer-contacts a,
 .footer-copyright a {
-  color: rgb(255, 209, 128);
+  color: #ffda96;
 
-  background-color: rgb(41, 52, 73);
+  background-color: #293449;
 }
 
 .footer-contacts a:hover,
@@ -331,7 +750,9 @@ footer {
 .footer-contacts a:active,
 .footer-copyright a:active {
   text-decoration: none;
-  color: rgb(238, 54, 67);
+  color: #ee3643;
 
-  background-color: rgb(41, 52, 73);
+  background-color: #293449;
 }
+
+/* footer end*/

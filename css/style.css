@@ -269,7 +269,7 @@ a.user-logout-button:focus {
   background-color: #8ed78f;
 }
 
-span {
+span.category-title {
   font-family: "Cuprum", sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -360,21 +360,18 @@ a.popular {
   border: 1px solid #eaeaea;
 }
 
-.catalog-category {
+.catalog-category,
+.catalog-item-title {
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: bold;
   text-align: center;
   color: #000;
 }
 
 .catalog-item-title {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  text-align: center;
   text-transform: uppercase;
-  color: #000;
 }
 
 .price-older {
@@ -512,6 +509,7 @@ img.brand {
   font-size: 13px;
   line-height: 18px;
   text-align: left;
+  font-weight: 400;
   text-transform: uppercase;
   color: #000;
 
@@ -543,8 +541,10 @@ legend {
 }
 
 button.filter {
+  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
+  font-weight: 400;
   color: #000;
 
   background-color: transparent;
@@ -582,16 +582,8 @@ ul.catalog-list {
   list-style: none;
 }
 
-.catalog-item a {
-  font-family: "Cuprum"sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .catalog-item-bay {
-  color: #fff;
+   color: #fff;
 
   background-color: #63a63e;
 }
@@ -606,7 +598,7 @@ ul.catalog-list {
 }
 
 .catalog-item-bookmark {
-  color: #32425c;
+   color: #32425c;
 
   background-color: transparent;
   border: 3px solid #63a63e;
@@ -635,6 +627,7 @@ ul.catalog-list {
   font-size: 13px;
   line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
   color: #000;
 
   border: 1px solid #e5e5e5;

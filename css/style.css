@@ -39,19 +39,6 @@ button:active {
   background-color: #ba2732;
 }
 
-.logo-technomart {
-  background-color: #ee3643;
-}
-
-.logo-technomart:hover,
-.logo-technomart:focus {
-  background-color: #ca2c37;
-}
-
-.logo-technomart:active {
-  background-color: #ba2732;
-}
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -67,7 +54,7 @@ button:active {
 /* general end */
 
 /* header */
-header {
+.main-header {
   font-family: "Cuprum", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -75,12 +62,64 @@ header {
   color: #000;
 
   background-color: #f1f5f7;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  margin-bottom: 60px;
 }
+
+
+.header-wrapper {
+  width: 100%;
+
+  background-color: #32425c;
+}
+
+.header-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 
 .header-top {
   color: #fff;
 
-  background-color: #32425c;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: space-between;
+  min-height: 42px;
+}
+
+.main-header-logo {
+  width: 220px;
+  height: 42px;
+  background-color: #ee3643;
+}
+
+.logo-technomart {
+  width: 137px;
+  height: 22px;
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+  background-color: #ca2c37;
+}
+
+.main-header-logo:active {
+  background-color: #ba2732;
+}
+
+form.search {
+  width: 270px;
 }
 
 .header-top input {
@@ -102,10 +141,13 @@ header {
   background-color: #fff;
 }
 
-.header-top a {
+a.bookmark,
+a.cart {
   color: #fff;
 
   background-color: #32425c;
+
+  width: 150px;
 }
 
 .bookmark:hover,
@@ -128,6 +170,8 @@ header {
   color: #fff;
 
   background-color: #63a63e;
+
+  width: 150px;
 }
 
 .to-order:hover,
@@ -143,6 +187,18 @@ header {
   background-color: #518534;
 }
 
+.header-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 158px;
+}
+
+.wrapper {
+  display: flex;
+  width: 295px;
+}
+
 .header-middle h1 {
   font-size: 16px;
   line-height: 23px;
@@ -150,13 +206,16 @@ header {
   font-weight: 400;
   text-align: left;
   color: #ee3643;
+
+  width: 205px;
 }
 
 .header-contacts {
-  font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  color: #32425c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 325px;
+  margin-left: 10px;
 }
 
 .header-contacts a {
@@ -166,10 +225,36 @@ header {
   color: #ee3643;
 
   border: 3px solid #fff;
+
+  width: 270px;
+}
+
+.header-contacts span {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #32425c;
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin-left: 10px;
+}
+
+.main-site-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
 }
 
 .main-site-navigation,
 .user-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -181,6 +266,7 @@ header {
 
   background-color: #fff;
 }
+
 
 .user-navigation a:hover,
 .user-navigation a:focus {
@@ -583,7 +669,7 @@ ul.catalog-list {
 }
 
 .catalog-item-bay {
-   color: #fff;
+  color: #fff;
 
   background-color: #63a63e;
 }
@@ -598,7 +684,7 @@ ul.catalog-list {
 }
 
 .catalog-item-bookmark {
-   color: #32425c;
+  color: #32425c;
 
   background-color: transparent;
   border: 3px solid #63a63e;

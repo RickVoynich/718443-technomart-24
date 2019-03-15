@@ -314,9 +314,7 @@ a.user-lk:active {
   list-style: none;
   flex-wrap: wrap;
   justify-content: stretch;
-  align-items: center;
-
-  background-color: #32425c;
+    background-color: #32425c;
 }
 
 .main-navigation a {
@@ -351,6 +349,7 @@ a.user-lk:active {
 }
 
 .category-material {
+  position: relative;
   background-color: #ffbf47;
 
   width: 300px;
@@ -359,6 +358,7 @@ a.user-lk:active {
 }
 
 .category-tool {
+  position: relative;
   background-color: #3bbce3;
 
   width: 300px;
@@ -367,6 +367,7 @@ a.user-lk:active {
 }
 
 .category-mechanism {
+  position: relative;
   background-color: #dc91d8;
 
   width: 300px;
@@ -374,23 +375,28 @@ a.user-lk:active {
   margin-bottom: 20px;
 }
 
+.category-wrap {
+  order: 2;
+}
+
 .category-special {
+  position: relative;
   background-color: #8ed78f;
 
   width: 300px;
   min-height: 125px;
   margin-bottom: 20px;
-  order: 2;
+  
 }
 
 .category-delivery {
+  position: relative;
   background-color: #ffbf47;
 
   width: 300px;
   min-height: 125px;
   margin-bottom: 20px;
-  order: 2;
-}
+  }
 
 .promo-slider {
   background-color: #000000;
@@ -402,23 +408,31 @@ a.user-lk:active {
 }
 
 span.category-title {
+  position: absolute;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   text-align: left;
   color: #ffffff;
+  top: 25px;
+  left: 20px;
 }
 
 .category-btn {
+  position: absolute;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  width: 135px;
+  padding: 10px 0;
+ top: 63px;
+ left: 20px;
 }
 
 .category-btn:hover,

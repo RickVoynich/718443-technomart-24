@@ -313,14 +313,22 @@ a.user-lk:active {
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
-  justify-content: stretch;
-    background-color: #32425c;
+  justify-content: center;
+  background-color: #32425c;
 }
 
 .main-navigation a {
   display: block;
   color: #ffffff;
-  padding: 20px 32px;
+  padding: 20px 31px;
+}
+
+.main-navigation li:nth-of-type(1) a {
+  padding-left: 50px;
+}
+
+.main-navigation li:nth-of-type(7) a {
+  padding-right: 50px;
 }
 
 .main-navigation a:hover,
@@ -386,7 +394,6 @@ a.user-lk:active {
   width: 300px;
   min-height: 125px;
   margin-bottom: 20px;
-  
 }
 
 .category-delivery {
@@ -396,7 +403,7 @@ a.user-lk:active {
   width: 300px;
   min-height: 125px;
   margin-bottom: 20px;
-  }
+}
 
 .promo-slider {
   background-color: #000000;
@@ -431,8 +438,8 @@ span.category-title {
   border-radius: 2px;
   width: 135px;
   padding: 10px 0;
- top: 63px;
- left: 20px;
+  top: 63px;
+  left: 20px;
 }
 
 .category-btn:hover,
@@ -473,7 +480,13 @@ span.category-title {
   background-color: #ee3643;
 }
 
-
+.popular-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f5f7;
+  margin-bottom: 20px;
+}
 
 h2 {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -485,8 +498,7 @@ h2 {
 
 h2.popular {
   color: #32425c;
-
-  background-color: #f1f5f7;
+  padding-left: 25px;
 }
 
 a.popular {
@@ -496,17 +508,45 @@ a.popular {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-
+  padding: 10px 0;
+  min-width: 253px;
   background-color: #ee3643;
+  border-radius: 2px;
+  margin-right: 25px;
+}
+
+.popular-product {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .popular-product-item,
-.brand,
 .catalog-item {
-  list-style: none;
-
+  display: flex;
+  flex-direction: column;
+  width: 220px;
   border: 1px solid #eaeaea;
 }
+
+.popular-product-item h3 {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.product {
+  width: 218px;
+  height: 168px;
+}
+
 
 .catalog-category,
 .catalog-item-title {
@@ -541,6 +581,28 @@ a.popular {
   color: #ffffff;
 
   background-color: #ee3643;
+}
+
+.popular-brand {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+li.brand {
+  display: flex;
+  min-height: 145px;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
 }
 
 img.brand {

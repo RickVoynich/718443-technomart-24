@@ -248,21 +248,19 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  }
+}
 
-  .user-navigation li {
-     display: flex;
-    justify-content: space-around;
-    max-width: 120px;
-     }
-
-  .user-navigation a {
+.user-navigation a {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
   padding: 10px 20px;
-
+  margin-left: 10px;
   background-color: #ffffff;
+}
+
+.user-navigation a.login-link {
+  padding-left: 40px;
 }
 
 .user-navigation a:hover,
@@ -303,40 +301,38 @@ a.user-lk:active {
   color: rgba(50, 66, 92, 0.3);
 }
 
+
 .main-navigation {
+  display: flex;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
   line-height: 17px;
   font-weight: 400;
   color: #ffffff;
-
-  background-color: #32425c;
-}
-
-.main-site-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 60px;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.main-site-navigation a {
-  color: #ffffff;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: center;
 
   background-color: #32425c;
 }
 
-.main-site-navigation a:hover,
-.main-site-navigation a:focus {
+.main-navigation a {
+  display: block;
+  color: #ffffff;
+  padding: 20px 32px;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
   color: #ffffff;
 
   background-color: #293449;
 }
 
-.main-site-navigation a:active {
+.main-navigation a:active {
   color: rgba(255, 255, 255, 0.6);
 
   background-color: #1d2739;
@@ -863,8 +859,6 @@ h5 {
   display: flex;
   flex-direction: column;
   width: 380px;
-}
-
 }
 
 .footer-logo {

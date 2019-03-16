@@ -405,15 +405,6 @@ a.user-lk:active {
   margin-bottom: 20px;
 }
 
-.promo-slider {
-  background-color: #000000;
-
-  width: 620px;
-  min-height: 270px;
-  margin-bottom: 20px;
-  order: 1;
-}
-
 span.category-title {
   position: absolute;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -435,7 +426,7 @@ span.category-title {
   text-align: center;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border-radius: 3px;
   width: 135px;
   padding: 10px 0;
   top: 63px;
@@ -451,7 +442,40 @@ span.category-title {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* slider */
+
+.promo-slider {
+  position: relative;
+  background-color: #000000;
+
+  width: 620px;
+  min-height: 270px;
+  margin-bottom: 20px;
+  order: 1;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slider-item:nth-child(2) {
+  display: block;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .promo-slider h4 {
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  max-width: 220px;
+  margin: 0;
+  margin-bottom: 5px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -462,6 +486,12 @@ span.category-title {
 }
 
 .promo-slider p {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+  max-width: 400px;
+  margin: 0;
+  margin-bottom: 63px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -470,14 +500,68 @@ span.category-title {
 }
 
 .promo-slider a {
+  position: absolute;
+  bottom: 25px;
+  left: 22px;
+  display: block;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-
+  width: 195px;
+  padding: 10px 0;
   background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 36px;
+  left: 302px;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slider-controls i {
+  position: relative;
+
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: #ffffff;
+}
+
+.slider-controls i.active::after {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+
+  width: 6px;
+  height: 6px;
+
+  background: #ee3643;
+
+  border-radius: 50%;
 }
 
 .popular-wrap {
@@ -492,6 +576,7 @@ h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: left;
 }
@@ -511,7 +596,7 @@ a.popular {
   padding: 10px 0;
   min-width: 253px;
   background-color: #ee3643;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-right: 25px;
 }
 
@@ -546,7 +631,6 @@ a.popular {
   width: 218px;
   height: 168px;
 }
-
 
 .catalog-category,
 .catalog-item-title {
@@ -610,8 +694,9 @@ img.brand {
 }
 
 .service {
+  display: flex;
   color: #000000;
-
+  margin-bottom: 80px;
   background-color: #f1f5f7;
 }
 
@@ -653,6 +738,20 @@ img.brand {
   color: #32425c;
 }
 
+.information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+}
+
+.left-block {
+  width: 535px;
+}
+
+.right-block {
+  width: 300px;
+}
+
 .information h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
@@ -665,14 +764,21 @@ img.brand {
 .information p {
   text-align: left;
   color: #000000;
+  margin-bottom: 23px;
 }
 
-.information ul {
+.left-block ul {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   text-align: left;
   color: #000000;
+  list-style-image: url(../img/list-style.png);
+  margin-bottom: 40px;
+}
+
+.left-block li {
+  margin-bottom: 21px;
 }
 
 .left-block a {
@@ -682,8 +788,15 @@ img.brand {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-
+  padding: 10px 40px;
+  margin-top: 40px;
+  border-radius: 3px;
   background-color: #ee3643;
+}
+
+.mini-map {
+  margin-top: -15px;
+  margin-bottom: 30px;
 }
 
 .right-block button {
@@ -693,7 +806,9 @@ img.brand {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  padding: 10px 61px;
 
+  border-radius: 3px;
   background-color: #ee3643;
 }
 

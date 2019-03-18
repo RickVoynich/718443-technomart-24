@@ -564,17 +564,13 @@ span.category-title {
 
 .slider-controls i.active::after {
   content: "";
-
   position: absolute;
   top: 2px;
   left: 2px;
   z-index: 1;
-
   width: 6px;
   height: 6px;
-
   background: #ee3643;
-
   border-radius: 50%;
 }
 
@@ -614,7 +610,8 @@ a.popular {
   margin-right: 25px;
 }
 
-.popular-product {
+.popular-product,
+.catalog-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -623,44 +620,47 @@ a.popular {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 .popular-product-item,
 .catalog-item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 218px;
+  min-height: 316px;
+  margin-bottom: 21px;
   border: 1px solid #eaeaea;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.popular-product-item h3 {
-  min-height: 40px;
-  padding: 0 25px;
+.popular-product-item h3,
+.catalog-item h3 {
+  display: block;
   margin-top: 10px;
   margin-bottom: 15px;
+  padding: 0 24px 0 25px;
+  text-align: center;
 }
 
-.product {
-  width: 218px;
-  height: 168px;
-}
-
-.catalog-category,
 .catalog-item-title {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
-  text-align: center;
   color: #000000;
 }
 
-.catalog-item-title {
+.catalog-item-title u {
+  text-decoration: none;
   text-transform: uppercase;
 }
 
 .price-older {
+  min-height: 20px;
+  margin-bottom: 8px;
+  display: block;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -679,6 +679,62 @@ a.popular {
   color: #ffffff;
 
   background-color: #ee3643;
+}
+
+div.actions {
+  display: none;
+}
+
+.buy,
+.to-bookmark {
+  font-family: "Cuprum", "Arial", sans-serif;
+  display: block;
+  padding: 10px 0;
+  margin: 0 auto 7px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.buy {
+  width: 135px;
+  color: #ffffff;
+  background-color: #63a63e;
+}
+
+.buy:hover,
+.buy:focus {
+  background-color: #57bb2d;
+}
+
+.buy:active {
+  background-color: #518534;
+}
+
+.to-bookmark {
+  width: 129px;
+  color: #32425c;
+
+  background-color: transparent;
+  border: 3px solid #63a63e;
+}
+
+.to-bookmark:hover,
+.to-bookmark:focus {
+  color: #32425c;
+
+  background-color: transparent;
+  border: 3px solid #32425c;
+}
+
+.to-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+
+  background-color: transparent;
+  border: 3px solid rgba(50, 66, 92, 0.3);
 }
 
 .popular-brand {
@@ -975,8 +1031,6 @@ label.max-price {
   padding-left: 7px;
 }
 
-hr {}
-
 .line {
   margin-bottom: 16px;
   border: 1px solid #e5e5e5;
@@ -995,8 +1049,7 @@ hr {}
 }
 
 .brands-filter ul,
-.power-type ul,
-.sort ul {
+.power-type ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1004,6 +1057,7 @@ hr {}
 
 
 .brands-filter li {
+  position: relative;
   margin-bottom: 20px;
   padding-left: 35px;
 }
@@ -1021,8 +1075,51 @@ legend {
 }
 
 .price-filter {
+
   background-color: #f3f3ec;
 }
+
+.check-input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.check-box {
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  top: -5px;
+  left: -4px;
+}
+
+.check-input:checked+.check-box {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.check-input:focus+.check-box {
+  background-image: url(../img/checkbox-off.svg);
+}
+
+.check-input:checked:focus+.check-box {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.check-input:disabled+.check-box {
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 0.3;
+}
+
+.check-input:checked:disabled+.check-box {
+  background-image: url(../img/checkbox-on.svg);
+  opacity: 0.3;
+}
+
+
+/* Радио-кнопки */
+
 
 button.filter {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1036,77 +1133,46 @@ button.filter {
 }
 
 .catalog {
-  display: flex;
-  flex-direction: column;
   width: 700px;
 }
 
-.catalog fieldset {
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 9px 0;
+  background: #f7f3ec;
+  border-radius: 3px;
+}
+
+.sorting span,
+.sorting ul {
   font-size: 13px;
   line-height: 18px;
   text-align: left;
   text-transform: uppercase;
   color: #000000;
-
-  background-color: #f3f3ec;
 }
 
-.catalog legend {
-  font: inherit;
+.sorting ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
 }
 
-a.sorting:hover,
-a.sorting:focus {
+.sorting a:hover,
+.sorting a:focus {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: underline;
   text-decoration-color: #ee3643;
   text-decoration-style: dotted;
 }
 
-a.sorting:active {
+.sorting a:active {
   color: #ee3643;
   text-decoration: none;
-}
-
-ul.catalog-list {
-  list-style: none;
-}
-
-.catalog-item-bay {
-  color: #ffffff;
-
-  background-color: #63a63e;
-}
-
-.catalog-item-bay:hover,
-.catalog-item-bay:focus {
-  background-color: #57bb2d;
-}
-
-.catalog-item-bay:active {
-  background-color: #518534;
-}
-
-.catalog-item-bookmark {
-  color: #32425c;
-
-  background-color: transparent;
-  border: 3px solid #63a63e;
-}
-
-.catalog-item-bookmark:hover,
-.catalog-item-bookmark:focus {
-  color: #32425c;
-
-  background-color: transparent;
-  border: 3px solid #32425c;
-}
-
-.catalog-item-bookmark:active {
-  color: rgba(50, 66, 92, 0.3);
-
-  background-color: transparent;
-  border: 3px solid rgba(50, 66, 92, 0.3);
 }
 
 .pagination-list {
@@ -1151,7 +1217,7 @@ ul.catalog-list {
   flex-direction: column;
 }
 
-h5 {
+.other-info h4 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;

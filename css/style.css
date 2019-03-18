@@ -652,7 +652,7 @@ a.popular {
   color: #000000;
 }
 
-.catalog-item-title u {
+.catalog-item-title span {
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -677,7 +677,6 @@ a.popular {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-
   background-color: #ee3643;
 }
 
@@ -1055,7 +1054,6 @@ label.max-price {
   list-style: none;
 }
 
-
 .brands-filter li {
   position: relative;
   margin-bottom: 20px;
@@ -1075,7 +1073,6 @@ legend {
 }
 
 .price-filter {
-
   background-color: #f3f3ec;
 }
 
@@ -1117,9 +1114,7 @@ legend {
   opacity: 0.3;
 }
 
-
 /* Радио-кнопки */
-
 
 button.filter {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1127,9 +1122,12 @@ button.filter {
   line-height: 18px;
   font-weight: 400;
   color: #000000;
-
   background-color: transparent;
   border: 1px solid #e5e5e5;
+  padding: 11px 38px 8px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .catalog {
@@ -1176,17 +1174,35 @@ button.filter {
 }
 
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 60px;
+  padding: 0;
   list-style: none;
 }
 
+.pagination-list li {
+  min-width: 36px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.pagination-list li:last-of-type {
+  min-width: 138px;
+}
+
 .pagination-item a {
+  display: block;
+  padding: 9px 0;
   font-size: 13px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
 }
 
 .pagination-item a:hover,
@@ -1202,28 +1218,35 @@ button.filter {
   color: #ffffff;
 
   background-color: #ee3643;
-  border: none;
+  border: 1px solid #ee3643;
 }
 
 .other-wrap {
   width: 100%;
-
   background-color: #f2f6f8;
+  padding: 68px 0;
 }
 
 .other-info {
   display: flex;
-  min-height: 260px;
   flex-direction: column;
-}
+ }
 
 .other-info h4 {
+  margin: 0;
+  margin-bottom: 28px;
   font-family: "Cuprum", "Arial", sans-serif;
+  
   font-size: 30px;
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
   color: #000000;
+}
+
+.other-info p {
+  margin: 0;
+  padding: 0;
 }
 
 /* main end */
@@ -1235,9 +1258,7 @@ button.filter {
   line-height: 24px;
   text-align: left;
   color: #f3f7f9;
-
   background-color: #32425c;
-
   display: flex;
   flex-direction: column;
 }

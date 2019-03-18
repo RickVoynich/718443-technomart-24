@@ -790,23 +790,44 @@ img.brand {
 .service {
   display: flex;
   color: #000000;
-  margin-bottom: 70px;
+  margin-top: 65px;
+  margin-bottom: 50px;
   background-color: #f2f6f8;
 }
 
 .service h2 {
+  margin-top: 68px;
   color: #000000;
 }
 
-.service li {
+.service p {
+  color: #000000;
+}
+
+.service-wrap {
+  position: relative;
+  width: 940px;
+  margin-top: 67px;
+  margin-bottom: 100px;
+}
+
+ul.service-slider {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 240px;
+}
+
+.service-slider li {
+  display: block;
+  padding: 16px 0 18px 17px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
-  line-height: 21px;
+  line-height: 30px;
   font-weight: bold;
   text-align: left;
   list-style: none;
   color: #32425c;
-
   background-color: #ffffff;
   border: none;
 }
@@ -824,12 +845,68 @@ img.brand {
   background-color: #293449;
 }
 
-.service h4 {
+.service-slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 315px;
+  width: 620px;
+  min-height: 290px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.service-slide p {
+  max-width: 375px;
+}
+
+.service-slide:nth-child(1) {
+  display: block;
+}
+
+.service-slide:nth-child(1) {
+  background-image: url(../img/delivery-car.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 468px 261px;
+
+}
+
+.service-slide:nth-child(2) {
+  background-image: url(../img/warranty.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 389px 283px;
+}
+
+.service-slide:nth-child(3) {
+  background-image: url(../img/credit.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 465px 285px;
+}
+
+.service-slide h4 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   text-align: left;
   color: #32425c;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.service-slide p {
+  margin: 0;
+}
+
+.credit button {
+  display: block;
+  margin-top: 28px;
+  width: 195px;
+  padding: 10px 0;
+  border-radius: 3px;
 }
 
 .information {

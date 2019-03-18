@@ -548,6 +548,31 @@ span.category-title {
   font-size: 0;
 }
 
+.arrow-left::after,
+.arrow-right::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 22px;
+  height: 40px;
+  background-image: url(../img/icon-arrow.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.arrow-left::after {
+  top: 114px;
+  left: 22px;
+  z-index: 240;
+}
+
+.arrow-right::after {
+  top: 114px;
+  right: 22px;
+  z-index: 240;
+  transform: scaleX(-1);
+}
+
 .slider-controls i {
   position: relative;
 
@@ -1083,6 +1108,7 @@ legend {
 }
 
 .check-box {
+  cursor: pointer;
   position: absolute;
   width: 27px;
   height: 23px;
@@ -1230,13 +1256,13 @@ button.filter {
 .other-info {
   display: flex;
   flex-direction: column;
- }
+}
 
 .other-info h4 {
   margin: 0;
   margin-bottom: 28px;
   font-family: "Cuprum", "Arial", sans-serif;
-  
+
   font-size: 30px;
   line-height: 30px;
   text-align: left;

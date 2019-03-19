@@ -72,9 +72,7 @@ img {
   line-height: 18px;
   font-weight: 400;
   color: #000000;
-
   background-color: #f2f6f8;
-
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
@@ -103,7 +101,6 @@ img {
 .header-top {
   color: #ffffff;
   background-color: transparent;
-
   display: flex;
   min-height: 42px;
 }
@@ -116,7 +113,6 @@ img {
 .main-header-logo .logo-technomart {
   padding: 13px 55px;
   padding-bottom: 17px;
-
   background-color: #ee3643;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
 }
@@ -130,14 +126,28 @@ img {
   background-color: #ba2732;
 }
 
+.search {
+  position: relative;
+  width: 270px;
+}
+
+.search-label {
+  position: absolute;
+  opacity: 0.3;
+  top: 12px;
+  left: 17px;
+  z-index: 20;
+  width: 17px;
+  height: 17px;
+  background-image: url(../img/icon-search.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 
 .search input {
   box-sizing: border-box;
-  width: 270px;
-  padding: 12px;
-  padding-left: 45px;
-
-
+  width: 100%;
+  padding: 12px 0 12px 49px;
   font: inherit;
   color: #ffffff;
   background-color: transparent;
@@ -149,41 +159,103 @@ img {
   background-color: #293449;
 }
 
+.search input:hover+label {
+  opacity: 1;
+}
+
 .search input:focus {
   color: #000000;
   background-color: #ffffff;
 }
 
-a.bookmark,
-a.cart {
-  padding: 12px 25px;
-  padding-left: 45px;
-  color: #ffffff;
-  flex-grow: 1;
+
+.search input:focus+label {
+  background-image: url(../img/icon-search-red.svg);
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 
-.bookmark:hover,
-.bookmark:focus,
-.cart:hover,
-.cart:focus {
+a.bookmark {
+  position: relative;
+  padding: 12px 28px;
+  padding-left: 44px;
   color: #ffffff;
+  }
 
+  a.bookmark::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 14px;
+    width: 14px;
+    height: 16px;
+    background-image: url(../img/icon-bookmark.svg);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    }
+
+a.cart {
+  position: relative;
+  padding: 12px 31px;
+  padding-left: 49px;
+  color: #ffffff;
+  }
+
+  a.cart::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon-cart.svg);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    }
+
+
+
+
+a.full-bookmark,
+a.full-cart {
+  padding-right: 26px;
+  background: #ee3643;
+}
+
+a.bookmark:hover,
+a.bookmark:focus,
+a.cart:hover,
+a.cart:focus {
+  color: #ffffff;
   background-color: #293449;
 }
 
-.bookmark:active,
-.cart:active {
-  color: rgba(255, 255, 255, 0.6);
+a.bookmark:hover::before,
+a.bookmark:focus::before,
+a.cart:hover::before,
+a.cart:focus::before {
+  opacity: 1;
+}
 
+a.bookmark:active,
+a.cart:active {
+    color: rgba(255, 255, 255, 0.6);
   background-color: #1d2739;
 }
 
+a.bookmark:active::before,
+a.cart:active::before {
+  opacity: 0.5;
+} 
+
+
 .to-order {
+  font-size: 17px;
+  line-height: 18px;
   color: #ffffff;
-
   background-color: #63a63e;
-
-  width: 150px;
+  padding: 12px 22px 12px 20px;
+  text-transform: none;
 }
 
 .to-order:hover,
@@ -326,13 +398,6 @@ nav.container {
   padding: 20px 31px;
 }
 
-.main-navigation li:nth-of-type(1) a {
-  padding-left: 50px;
-}
-
-.main-navigation li:nth-of-type(7) a {
-  padding-right: 50px;
-}
 
 .main-navigation a:hover,
 .main-navigation a:focus {
@@ -521,13 +586,13 @@ span.category-title {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   width: 195px;
   padding: 10px 0;
   background-color: #ee3643;
   border-radius: 3px;
+  text-align: center;
 }
 
 .btn:hover,
@@ -575,15 +640,12 @@ span.category-title {
 
 .slider-controls i {
   position: relative;
-
   display: inline-block;
   width: 10px;
   height: 10px;
   margin-left: 10px;
-
   border-radius: 50%;
   cursor: pointer;
-
   background-color: #ffffff;
 }
 
@@ -640,7 +702,6 @@ a.popular {
   margin: 0;
   padding: 0;
   list-style: none;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -660,17 +721,10 @@ a.popular {
   vertical-align: middle;
 }
 
-.popular-product-item h3,
-.catalog-item h3 {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 0 24px 0 25px;
-  text-align: center;
-}
-
 .catalog-item-title {
   font-family: "PT Sans", "Arial", sans-serif;
+  display: block;
+  padding: 10px 24px 15px 25px;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -678,7 +732,6 @@ a.popular {
 }
 
 .catalog-item-title span {
-  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -741,7 +794,6 @@ div.actions {
 .to-bookmark {
   width: 129px;
   color: #32425c;
-
   background-color: transparent;
   border: 3px solid #63a63e;
 }
@@ -749,14 +801,12 @@ div.actions {
 .to-bookmark:hover,
 .to-bookmark:focus {
   color: #32425c;
-
   background-color: transparent;
   border: 3px solid #32425c;
 }
 
 .to-bookmark:active {
   color: rgba(50, 66, 92, 0.3);
-
   background-color: transparent;
   border: 3px solid rgba(50, 66, 92, 0.3);
 }
@@ -765,10 +815,8 @@ div.actions {
   margin: 0;
   padding: 0;
   list-style: none;
-
   display: flex;
   justify-content: space-between;
-
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
@@ -1121,11 +1169,11 @@ h2.breadcrumbs-title {
   border-radius: 5px;
   background: #f3f3ec;
   font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 17px;
-  line-height: 18px;
   text-align: center;
   color: #000000;
   margin-bottom: 26px;
+  font-size: 17px;
+  line-height: 18px;
 }
 
 label.max-price {
@@ -1140,13 +1188,13 @@ label.max-price {
 
 .catalog-columns fieldset {
   font-size: 15px;
-  line-height: 20px;
   text-align: left;
   font-weight: 400;
-  text-transform: uppercase;
   margin: 0;
-  padding: 0;
   border: none;
+  line-height: 20px;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 .brands-filter ul,
@@ -1326,6 +1374,7 @@ button.filter {
 
 .other-wrap {
   width: 100%;
+  display: flex;
   background-color: #f2f6f8;
   padding: 68px 0;
 }
@@ -1335,7 +1384,7 @@ button.filter {
   flex-direction: column;
 }
 
-.other-info h4 {
+.other-info h2 {
   margin: 0;
   margin-bottom: 28px;
   font-family: "Cuprum", "Arial", sans-serif;

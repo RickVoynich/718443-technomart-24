@@ -1056,12 +1056,12 @@ li.brand:active {
   display: flex;
   color: #000000;
   margin-top: 65px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   background-color: #f2f6f8;
 }
 
 .service h2 {
-  margin-top: 68px;
+  padding-top: 41px;
   color: #000000;
 }
 
@@ -1077,44 +1077,60 @@ li.brand:active {
 }
 
 ul.service-slider {
+  position: relative;
   padding: 0;
   margin: 0;
   list-style: none;
   width: 240px;
 }
 
+ul.service-slider::after {
+  content: "";
+  position: absolute;
+  z-index: 70;
+  top: -45px;
+  left: 230px;
+  width: 10px;
+  height: 279px;
+  background-image: url(../img/shadow.png);
+  background-repeat: no-repeat;
+}
+
 .service-slider li {
   display: block;
-  padding: 16px 0 18px 17px;
+  padding: 13px 0 16px 22px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
   text-align: left;
   list-style: none;
-  color: #32425c;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #32425c;
   border: none;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
 }
 
 .service li:hover,
 .service li:focus {
   color: #ffffff;
-
-  background-color: #32425c;
+  background-color: #293449;
 }
 
-.service li:active {
-  color: #ffffff;
 
-  background-color: #293449;
+.service li:active {
+  color: #32425c;
+  background-color: #ffffff;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .service-slide {
   display: none;
   position: absolute;
-  top: 0;
-  left: 315px;
+  top: -2px;
+  left: 317px;
   width: 620px;
   min-height: 290px;
   z-index: 3;
@@ -1177,7 +1193,7 @@ ul.service-slider {
 .information {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 86px;
+  margin-bottom: 87px;
 }
 
 .left-block {
@@ -1209,20 +1225,23 @@ ul.service-slider {
   line-height: 20px;
   text-align: left;
   color: #000000;
-  margin-bottom: 40px;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
   list-style: none;
 }
 
 .left-block li {
   position: relative;
-  margin-bottom: 21px;
+  padding-bottom: 20px;
+  padding-left: 35px;
 }
 
 .left-block li::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 9px;
-  left: -36px;
+  left: 0;
   display: block;
   width: 25px;
   height: 2px;
@@ -1236,15 +1255,13 @@ ul.service-slider {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 10px 40px;
-  margin-top: 40px;
+  padding: 12px 40px 10px;
   border-radius: 3px;
   background-color: #ee3643;
 }
 
 .mini-map {
   margin-top: -15px;
-  margin-bottom: 30px;
 }
 
 .right-block button {
@@ -1254,9 +1271,9 @@ ul.service-slider {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 10px 0;
+  padding: 13px 58px 8px 64px;
   width: 300px;
-
+  margin-top: 31px;
   border-radius: 3px;
   background-color: #ee3643;
 }
@@ -1286,7 +1303,6 @@ ul.service-slider {
 }
 
 h2.breadcrumbs-title {
-
   color: #32425c;
   padding: 29px;
   margin: 0;
@@ -1618,7 +1634,6 @@ button.filter {
   padding: 0;
 }
 
-/* main end */
 
 /* footer */
 .main-footer {
@@ -1634,8 +1649,8 @@ button.filter {
 
 .footer-top {
   display: flex;
+  margin-bottom: 32px;
   justify-content: space-between;
-  min-height: 195px;
   background-color: transparent;
 }
 
@@ -1668,7 +1683,7 @@ button.filter {
 }
 
 .left-column p {
-  padding-top: 15px;
+  padding: 11px 1px 0 3px;
 }
 
 .right-column {
@@ -1690,7 +1705,7 @@ button.filter {
 }
 
 .site-navigation li {
-  padding-top: 40px;
+  padding-top: 39px;
 }
 
 .site-navigation a {
@@ -1739,6 +1754,7 @@ button.filter {
 .footer-bottom-wrapper {
   width: 100%;
   background-color: #293449;
+  padding-bottom: 30px;
 }
 
 .footer-bottom {
@@ -1753,12 +1769,8 @@ button.filter {
 }
 
 .copyright {
+  padding-top: 23px;
   width: 280px;
-}
-
-.copyright p {
-  margin-top: 36px;
-  margin-bottom: 30px;
 }
 
 .footer-social {
@@ -1767,13 +1779,11 @@ button.filter {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 130px;
 }
 
 .footer-social li {
+  margin-left: 5px;
   margin-top: 35px;
-  margin-bottom: 30px;
 }
 
 .social-button {
@@ -1793,14 +1803,17 @@ button.filter {
 
 .footer-feedback {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
   width: 320px;
+
 }
 
-.footer-feedback p {
-  margin-top: 36px;
-  margin-bottom: 30px;
+.footer-contacts {
   padding-left: 22px;
+}
+
+.footer-copyright {
+  padding-left: 52px;
 }
 
 .footer-contacts a,
@@ -1820,6 +1833,3 @@ button.filter {
   text-decoration: none;
   color: #ee3643;
 }
-
-
-/* footer end*/

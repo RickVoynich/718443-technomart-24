@@ -180,41 +180,38 @@ a.bookmark {
   padding: 12px 28px;
   padding-left: 44px;
   color: #ffffff;
-  }
+}
 
-  a.bookmark::before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 14px;
-    width: 14px;
-    height: 16px;
-    background-image: url(../img/icon-bookmark.svg);
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    }
+a.bookmark::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 14px;
+  height: 16px;
+  background-image: url(../img/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
 
 a.cart {
   position: relative;
   padding: 12px 31px;
   padding-left: 49px;
   color: #ffffff;
-  }
+}
 
-  a.cart::before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 14px;
-    width: 15px;
-    height: 15px;
-    background-image: url(../img/icon-cart.svg);
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    }
-
-
-
+a.cart::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
 
 a.full-bookmark,
 a.full-cart {
@@ -239,15 +236,14 @@ a.cart:focus::before {
 
 a.bookmark:active,
 a.cart:active {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   background-color: #1d2739;
 }
 
 a.bookmark:active::before,
 a.cart:active::before {
   opacity: 0.5;
-} 
-
+}
 
 .to-order {
   font-size: 17px;
@@ -261,13 +257,11 @@ a.cart:active::before {
 .to-order:hover,
 .to-order:focus {
   color: #ffffff;
-
   background-color: #5fbb2d;
 }
 
 .to-order:active {
   color: rgba(255, 255, 255, 0.6);
-
   background-color: #518534;
 }
 
@@ -285,40 +279,52 @@ a.cart:active::before {
   font-weight: 400;
   text-align: left;
   color: #ee3643;
-  margin: 47px 0 41px 49px;
+  width: 247px;
+  margin: 48px 0 40px 52px;
 }
 
 .header-contacts {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 46px 0 0 18px;
-  width: 270px;
+  width: 264px;
+  margin: 46px 50px 4px 21px;
 }
 
 .header-contacts a {
   display: block;
+  position: relative;
+  padding: 10px 41px 10px 69px;
   font-size: 21px;
   line-height: 21px;
-  color: #ee3643;
-  padding: 8px 44px 8px 74px;
+  color: #e9292a;
   border: 3px solid #ffffff;
+}
+
+.header-contacts a::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 19px;
+  height: 19px;
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
 }
 
 .header-contacts span {
   font-size: 14px;
   line-height: 24px;
+  margin-top: 3px;
   text-align: center;
   color: #32425c;
-  padding-top: 4px;
 }
 
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
   justify-content: flex-end;
-  margin-top: 46px;
+  width: 300px;
+  margin-top: 45px;
 }
 
 .user-navigation a {
@@ -326,12 +332,65 @@ a.cart:active::before {
   line-height: 21px;
   color: #000000;
   background-color: #ffffff;
-  padding: 11px 23px;
 }
 
 a.login-link {
-  padding-left: 47px;
+  position: relative;
   margin-right: 10px;
+  padding: 12px 26px 14px 46px;
+}
+
+.icon-login {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 20px;
+  height: 17px;
+  background-image: url(../img/icon-login.svg);
+  background-repeat: no-repeat;
+}
+
+a.user-account-button {
+  position: relative;
+  padding: 12px 27px 14px 46px;
+}
+
+.user-account {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 20px;
+  height: 18px;
+  background-image: url(../img/icon-user.svg);
+  background-repeat: no-repeat;
+}
+
+a.user-logout-button {
+  position: relative;
+  padding: 12px 10px 14px 10px;
+}
+
+.user-logout {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 21px;
+  height: 17px;
+  background-image: url(../img/icon-logout.svg);
+  background-repeat: no-repeat;
+}
+
+.user-icon:hover path,
+.user-icon:focus path {
+  fill: #32425c;
+}
+
+.user-icon:active path {
+  fill: #c5c5c5;
+}
+
+a.register-link {
+  padding: 12px 25px 14px 23px;
 }
 
 .user-navigation a:hover,
@@ -352,12 +411,35 @@ a.user-logout-button:focus {
 
 a.user-order,
 a.user-lk {
-  font-size: 17px;
+  margin-top: 6px;
+  font-size: 16px;
   line-height: 18px;
   text-align: left;
   color: #32425c;
   text-decoration: underline;
   background-color: transparent;
+}
+
+a.user-order {
+  position: relative;
+  padding-left: 11px;
+  padding-right: 15px;
+}
+
+a.user-order::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 4px;
+  height: 4px;
+  background-color: #32425c;
+  border-radius: 50%;
+}
+
+a.user-lk {
+  padding-left: 15px;
+  padding-right: 70px;
 }
 
 a.user-order:hover,
@@ -1521,10 +1603,8 @@ button.filter {
 
 .footer-bottom-wrapper {
   width: 100%;
-
   background-color: #293449;
 }
-
 
 .footer-bottom {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1550,7 +1630,6 @@ button.filter {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1568,7 +1647,6 @@ button.filter {
   justify-content: center;
   width: 42px;
   height: 42px;
-
   background-color: #1d2739;
   border-radius: 50%;
 }

@@ -236,17 +236,17 @@ a.cart:focus {
   background-color: #293449;
 }
 
+a.bookmark:active,
+a.cart:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #1d2739;
+}
+
 a.bookmark:hover::before,
 a.bookmark:focus::before,
 a.cart:hover::before,
 a.cart:focus::before {
   opacity: 1;
-}
-
-a.bookmark:active,
-a.cart:active {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #1d2739;
 }
 
 a.bookmark:active::before,
@@ -507,7 +507,7 @@ nav.container {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 55px;
+  margin-bottom: 53px;
 }
 
 .category-material {
@@ -815,7 +815,7 @@ h2 {
 
 h2.popular {
   color: #32425c;
-  padding-left: 25px;
+  margin: 30px 0 29px 28px;
 }
 
 a.popular {
@@ -826,10 +826,10 @@ a.popular {
   text-transform: uppercase;
   color: #ffffff;
   padding: 10px 0;
+  margin: 25px 24px 26px 0;
   min-width: 253px;
   background-color: #ee3643;
   border-radius: 3px;
-  margin-right: 25px;
 }
 
 .popular-product,
@@ -838,8 +838,7 @@ a.popular {
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -850,16 +849,25 @@ a.popular {
   flex-direction: column;
   width: 218px;
   min-height: 316px;
+  margin-right: 20px;
   margin-bottom: 21px;
   border: 1px solid #eaeaea;
   text-align: center;
   vertical-align: middle;
 }
 
+.popular-product-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .catalog-item-title {
   font-family: "PT Sans", "Arial", sans-serif;
   display: block;
-  padding: 10px 24px 15px 25px;
+  padding: 5px 24px 10px 25px;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -868,6 +876,106 @@ a.popular {
 
 .catalog-item-title span {
   text-transform: uppercase;
+}
+
+.popular-product-item .actions,
+.catalog-item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+.actions .buy,
+.actions .to-bookmark {
+  position: relative;
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  background-color: #63a63e;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.actions .buy::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  z-index: 100;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.actions .buy:hover,
+.actions .buy:focus {
+  background-color: #57bb2d;
+  border: 3px solid #57bb2d;
+  border-bottom-color: #367315;
+}
+
+.actions .buy:active {
+  background-color: #518534;
+  border: 3px solid #518534;
+}
+
+.actions .buy:hover::before,
+.actions .buy:focus::before,
+.actions .buy:active::before {
+  opacity: 1;
+}
+
+.actions .to-bookmark {
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
+}
+
+.actions .to-bookmark:hover,
+.actions .to-bookmark:focus {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #32425c;
+}
+
+.actions .to-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+  background-color: #ffffff;
+  border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
+.popular-product-item:hover,
+.catalog-item:hover,
+.popular-product-item:focus,
+.catalog-item:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.popular-product-item .actions,
+.catalog-item .actions {
+  display: none;
+}
+
+.popular-product-item:hover .actions,
+.catalog-item:hover .actions {
+  display: block;
 }
 
 .price-older {
@@ -884,66 +992,29 @@ a.popular {
 }
 
 .price {
+  display: inline-block;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
   color: #ffffff;
   background-color: #ee3643;
+  position: relative;
+  width: 80px;
+  margin: 0 10px 20px 43px;
+  padding: 10px 14px 10px 29px;
+  border-radius: 3px 0 0 3px;
 }
 
-div.actions {
-  display: none;
-}
-
-.buy,
-.to-bookmark {
-  font-family: "Cuprum", "Arial", sans-serif;
-  display: block;
-  padding: 10px 0;
-  margin: 0 auto 7px;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 3px;
-}
-
-.buy {
-  width: 135px;
-  color: #ffffff;
-  background-color: #63a63e;
-}
-
-.buy:hover,
-.buy:focus {
-  background-color: #57bb2d;
-}
-
-.buy:active {
-  background-color: #518534;
-}
-
-.to-bookmark {
-  width: 129px;
-  color: #32425c;
-  background-color: transparent;
-  border: 3px solid #63a63e;
-}
-
-.to-bookmark:hover,
-.to-bookmark:focus {
-  color: #32425c;
-  background-color: transparent;
-  border: 3px solid #32425c;
-}
-
-.to-bookmark:active {
-  color: rgba(50, 66, 92, 0.3);
-  background-color: transparent;
-  border: 3px solid rgba(50, 66, 92, 0.3);
+.price:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -36px;
+  width: 0;
+  height: 0;
+  border: 18px solid #ffffff;
+  border-left-color: #ee3643;
 }
 
 .popular-brand {
@@ -951,23 +1022,34 @@ div.actions {
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 li.brand {
+  position: relative;
   display: flex;
-  min-height: 145px;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  border: 1px solid #eaeaea;
+  width: 218px;
+  min-height: 143px;
+  margin-right: 20px;
   margin-bottom: 20px;
+  border: 1px solid #eaeaea;
+  align-items: center;
+  justify-content: center;
 }
 
-img.brand {
-  border: none;
+li.brand:nth-child(4n) {
+  margin-right: 0;
+}
+
+li.brand:hover,
+li.brand:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+li.brand:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
 }
 
 .service {

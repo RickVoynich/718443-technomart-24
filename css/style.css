@@ -1028,14 +1028,9 @@ a.popular {
 
 li.brand {
   position: relative;
-  display: flex;
-  width: 218px;
-  min-height: 143px;
   margin-right: 20px;
   margin-bottom: 20px;
   border: 1px solid #eaeaea;
-  align-items: center;
-  justify-content: center;
 }
 
 li.brand:nth-child(4n) {
@@ -1050,6 +1045,14 @@ li.brand:focus {
 li.brand:active {
   box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
   opacity: 0.3;
+}
+
+.brand a {
+  width: 218px;
+  height: 143px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service {

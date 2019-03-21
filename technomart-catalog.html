@@ -69,10 +69,12 @@
   <main>
     <div class="breadcrumbs-wrap container">
       <ul class="breadcrumbs">
-        <li> <a class="breadcrumbs-item" href="index.html">Главная</a> </li>
-        <li> <a class="breadcrumbs-item" href="technomart-catalog.html">Каталог</a> </li>
-        <li> <a class="breadcrumbs-item" href="#">Инструмент</a> </li>
-        <li> <a class="breadcrumbs-item" href="#">Перфораторы</a> </li>
+        <li><a class="breadcrumbs-item" href="index.html">
+            <span class="visually-hidden">Главная</span>
+          </a></li>
+        <li><a class="breadcrumbs-item" href="technomart-catalog.html">Каталог</a> </li>
+        <li><a class="breadcrumbs-item" href="#">Инструмент</a> </li>
+        <li><a class="breadcrumbs-item" href="#">Перфораторы</a> </li>
       </ul>
       <h2 class="breadcrumbs-title">Перфораторы</h2>
     </div>
@@ -142,12 +144,18 @@
             <legend>Питание:</legend>
             <ul>
               <li>
-                <input type="radio" name="power-type" id="cordless" value="cordless" checked>
-                <label for="cordless">Аккумуляторные</label>
+                <label>
+                  <input type="radio" class="radio-input" name="power-type" value="cordless" checked>
+                  <span class="radio"></span>
+                  Аккумуляторные
+                </label>
               </li>
               <li>
-                <input type="radio" name="power-type" id="corded" value="corded">
-                <label for="corded">Сетевые</label>
+                <label>
+                  <input type="radio" class="radio-input" name="power-type" value="corded">
+                  <span class="radio"></span>
+                  Сетевые
+                </label>
               </li>
             </ul>
           </fieldset>

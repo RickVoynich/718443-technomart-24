@@ -885,7 +885,7 @@ a.popular {
   left: 0;
   width: 218px;
   height: 88px;
-  padding: 40px 0;
+  padding: 44px 0;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 10;
 }
@@ -1119,7 +1119,8 @@ ul.service-slider::after {
 }
 
 
-.service li:active {
+.service li:active,
+li.active-service {
   color: #32425c;
   background-color: #ffffff;
   border-top: 1px solid #ffffff;
@@ -1573,6 +1574,7 @@ button.filter {
   border-radius: 3px;
   cursor: pointer;
   margin-top: 56px;
+  margin-bottom: 20px;
 }
 
 .catalog {
@@ -1583,7 +1585,7 @@ button.filter {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding: 10px 0;
+  padding: 9px 18px;
   background: #f7f3ec;
   border-radius: 3px;
 }
@@ -1602,21 +1604,85 @@ button.filter {
   padding: 0;
   list-style: none;
   display: flex;
+  width: 460px;
   justify-content: flex-end;
 }
 
-.sorting a:hover,
-.sorting a:focus {
+.sorting a {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: underline;
   text-decoration-color: #ee3643;
   text-decoration-style: dotted;
 }
 
-.sorting a:active {
+.sort-price {
+  padding-right: 70px;
+}
+
+.sort-type {
+  padding-right: 65px;
+}
+
+.sort-function {
+  padding-right: 66px;
+}
+
+.sort-up {
+  padding-right: 21px;
+}
+
+.sorting a:hover,
+.sorting a:focus {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #ee3643;
+  text-decoration-style: solid;
+}
+
+.sorting a:active,
+a.active {
   color: #ee3643;
   text-decoration: none;
 }
+
+a.sort-up {
+  position: relative;
+}
+
+.up {
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  width: 11px;
+  height: 10px;
+  background-image: url(../img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+}
+
+a.sort-down {
+  position: relative;
+}
+
+.down {
+  position: absolute;
+  top: 5px;
+  left: -8px;
+  width: 11px;
+  height: 10px;
+  background-image: url(../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+}
+
+.sort-btn:hover path,
+.sort-btn:focus path {
+  fill: #231f20;
+}
+
+.sort-btn:active path,
+.active-btn path {
+  fill: #ee3643;
+}
+
 
 .pagination-list {
   display: flex;
@@ -1630,8 +1696,8 @@ button.filter {
 
 .pagination-list li {
   min-width: 36px;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 9px;
+  margin-right: 9px;
 }
 
 .pagination-list li:last-of-type {
@@ -1640,7 +1706,7 @@ button.filter {
 
 .pagination-item a {
   display: block;
-  padding: 9px 0;
+  padding: 8px 14px 10px 16px;
   font-size: 13px;
   line-height: 18px;
   text-align: center;
@@ -1670,17 +1736,17 @@ button.filter {
   width: 100%;
   display: flex;
   background-color: #f2f6f8;
-  padding: 68px 0;
 }
 
 .other-info {
   display: flex;
   flex-direction: column;
+  padding: 67px 0 69px;
 }
 
 .other-info h2 {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-family: "Cuprum", "Arial", sans-serif;
 
   font-size: 30px;

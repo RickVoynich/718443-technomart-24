@@ -1299,17 +1299,6 @@ li.active-service {
   position: relative;
 }
 
-.breadcrumbs li:first-child::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: -1px;
-  width: 15px;
-  height: 12px;
-  background-image: url(../img/icon-home.svg);
-  background-repeat: no-repeat;
-}
-
 .breadcrumbs li:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -1330,6 +1319,17 @@ a.breadcrumbs-item {
   text-transform: uppercase;
   color: #000000;
   padding: 0 30px 0 12px;
+}
+
+a.home-page::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -1px;
+  width: 15px;
+  height: 12px;
+  background-image: url(../img/icon-home.svg);
+  background-repeat: no-repeat;
 }
 
 h2.breadcrumbs-title {

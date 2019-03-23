@@ -1891,7 +1891,7 @@ a.sort-down {
   margin-top: -226px;
 }
 
-.modal-cart p {
+.modal-cart h2 {
   position: relative;
   text-align: center;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1904,7 +1904,7 @@ a.sort-down {
   margin: 0;
 }
 
-.modal-cart p::before {
+.modal-cart h2::before {
   position: absolute;
   content: "";
   top: 55px;

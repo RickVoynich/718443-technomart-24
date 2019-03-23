@@ -1112,18 +1112,6 @@ li.brand:nth-child(4n) {
   margin-right: 0;
 }
 
-li.brand:hover,
-li.brand:focus {
-  -webkit-box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
-  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
-}
-
-li.brand:active {
-  -webkit-box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
-  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
-  opacity: 0.3;
-}
-
 .brand a {
   width: 218px;
   height: 143px;
@@ -1136,6 +1124,18 @@ li.brand:active {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.brand a:hover,
+.brand a:focus {
+  -webkit-box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.brand a:active {
+  -webkit-box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
 }
 
 .service {

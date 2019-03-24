@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 960px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -21,17 +22,13 @@ img {
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   -webkit-clip-path: inset(100%);
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -43,7 +40,6 @@ img {
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
-
   background-color: #ee3643;
   border: none;
 }
@@ -168,6 +164,27 @@ img {
   border: none;
 }
 
+.search input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.search input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.search input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.search input::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.search input::placeholder {
+  color: #ffffff;
+}
+
 .search input:hover {
   color: #ffffff;
   background-color: #293449;
@@ -266,6 +283,7 @@ a.cart:active::before {
 .to-order {
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
   color: #ffffff;
   background-color: #63a63e;
   padding: 12px;
@@ -306,8 +324,8 @@ a.cart:active::before {
   font-weight: 400;
   text-align: left;
   color: #ee3643;
-  width: 247px;
-  margin: 48px 0 40px 52px;
+  width: 199px;
+  margin: 48px 50px 40px 52px;
 }
 
 .header-contacts {
@@ -656,7 +674,7 @@ span.category-title {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: left;
   color: #ffffff;
   top: 21px;
@@ -741,7 +759,7 @@ span.category-title {
   font-size: 36px;
   line-height: 36px;
   text-align: left;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -857,17 +875,13 @@ span.category-title {
   margin-bottom: 20px;
 }
 
-h2 {
+h2.popular {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
-  color: #000000;
   text-transform: uppercase;
   text-align: left;
-}
-
-h2.popular {
   color: #32425c;
   margin: 30px 0 29px 28px;
 }
@@ -939,7 +953,7 @@ a.popular {
   padding: 0 24px 10px 25px;
   font-size: 18px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -973,7 +987,7 @@ a.popular {
   border-radius: 3px;
   color: white;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 400;
   font-family: "Cuprum", sans-serif;
   line-height: 18px;
   text-decoration: none;
@@ -1054,7 +1068,7 @@ a.popular {
   display: block;
   font-size: 17px;
   line-height: 18px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: line-through;
   text-transform: uppercase;
   text-align: center;
@@ -1065,7 +1079,7 @@ a.popular {
   display: inline-block;
   font-size: 17px;
   line-height: 18px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
@@ -1149,8 +1163,14 @@ li.brand:nth-child(4n) {
 }
 
 .service h2 {
-  padding-top: 41px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
   color: #000000;
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 41px;
 }
 
 .service p {
@@ -1190,7 +1210,7 @@ ul.service-slider::after {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: left;
   list-style: none;
   color: #ffffff;
@@ -1297,9 +1317,10 @@ li.active-service {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
+  color: #000000;
   text-transform: uppercase;
   text-align: left;
-  color: #000000;
 }
 
 .information p {
@@ -1428,7 +1449,13 @@ a.home-page::before {
 }
 
 h2.breadcrumbs-title {
-  color: #32425c;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: left;
   padding: 30px;
   margin: 20px 0;
   background-color: #f2f6f8;
@@ -1474,7 +1501,7 @@ h2.breadcrumbs-title {
 .filter legend {
   font-size: 17px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   padding: 12px 0;
   margin: 0;
 }
@@ -1864,9 +1891,10 @@ a.sort-down {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
-  text-align: left;
-  text-transform: uppercase;
+  font-weight: 400;
   color: #000000;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .other-info p {

@@ -734,13 +734,13 @@ span.category-title {
   display: none;
 }
 
-#product-1:checked~.slider-list  #slider-1 {
+#product-1:checked~.slider-list #slider-1 {
   background-image: url(../img/slider-1.jpg);
   background-repeat: no-repeat;
   background-size: 620px 266px;
 }
 
-#product-2:checked~.slider-list #slider-2{
+#product-2:checked~.slider-list #slider-2 {
   background-image: url(../img/slider-2.jpg);
   background-repeat: no-repeat;
   background-size: 620px 266px;
@@ -2329,7 +2329,6 @@ p.copyright {
   -ms-flex-align: end;
   align-items: flex-end;
   width: 310px;
-
 }
 
 .footer-contacts {

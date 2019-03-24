@@ -552,8 +552,6 @@ nav.container {
   background-color: #1d2739;
 }
 
-/* main */
-
 .promo-category {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -732,21 +730,28 @@ span.category-title {
   overflow: hidden;
 }
 
-.slider-item:nth-child(2) {
-  display: block;
+.slider-item {
+  display: none;
 }
 
-.slider-item:nth-child(1) {
+#product-1:checked~.slider-list  #slider-1 {
   background-image: url(../img/slider-1.jpg);
   background-repeat: no-repeat;
   background-size: 620px 266px;
 }
 
-.slider-item:nth-child(2) {
+#product-2:checked~.slider-list #slider-2{
   background-image: url(../img/slider-2.jpg);
   background-repeat: no-repeat;
   background-size: 620px 266px;
 }
+
+#product-1:checked~.slider-list #slider-1,
+#product-2:checked~.slider-list #slider-2 {
+  display: block;
+}
+
+
 
 .promo-slider h4 {
   position: absolute;
@@ -796,10 +801,27 @@ span.category-title {
 
 .slider-controls {
   position: absolute;
-  bottom: 25px;
-  left: 285px;
+  bottom: 22px;
+  left: 293px;
   z-index: 3;
   font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  vertical-align: top;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked~.slider-controls label[for="product-1"],
+#product-2:checked~.slider-controls label[for="product-2"] {
+  background-color: #ee3643;
 }
 
 .arrow-left::after,
@@ -827,30 +849,6 @@ span.category-title {
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   transform: scaleX(-1);
-}
-
-.slider-controls i {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 10px;
-  height: 10px;
-  margin-left: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: #ffffff;
-}
-
-.slider-controls i.active::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  z-index: 4;
-  width: 6px;
-  height: 6px;
-  background: #ee3643;
-  border-radius: 50%;
 }
 
 .popular-wrap {
@@ -1832,7 +1830,6 @@ a.sort-down {
 .active-btn path {
   fill: #ee3643;
 }
-
 
 .pagination-list {
   display: -webkit-box;

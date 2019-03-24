@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин строительных материалов Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,400i,700&amp;subset=cyrillic"
+    rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -83,23 +84,21 @@
       </div>
       <div class="promo-slider">
         <h2 class="visually-hidden">Промо-слайды</h2>
-        <button type="button" class="arrow-left">
-          <span class="visually-hidden">Назад</span>
-        </button>
-        <button type="button" class="arrow-right">
-          <span class="visually-hidden">Вперед</span>
-        </button>
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
         <div class="slider-controls">
-          <i></i>
-          <i class="active"></i>
+          <label for="product-1">Первый слайд</label>
+          <label for="product-2">Второй слайд</label>
         </div>
+        <label class="arrow-left" for="product-1" aria-label="Назад"></label>
+        <label class="arrow-right" for="product-2" aria-label="Вперед"></label>
         <ul class="slider-list">
-          <li class="slider-item slider-1">
+          <li class="slider-item" id="slider-1">
             <h4>Перфораторы</h4>
             <p>Настоящие мужские игрушки</p>
             <a class="btn" href="technomart-catalog.html">Открыть каталог</a>
           </li>
-          <li class="slider-item slider-2">
+          <li class="slider-item" id="slider-2">
             <h4>Дрели</h4>
             <p>Соседям на радость!</p>
             <a class="btn" href="technomart-catalog.html">Открыть каталог</a>

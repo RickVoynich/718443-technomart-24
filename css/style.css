@@ -20,7 +20,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -794,15 +794,6 @@ span.category-title {
   text-align: center;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: #ca2c37;
-}
-
-.btn:active {
-  background-color: #ba2732;
-}
-
 .slider-controls {
   position: absolute;
   bottom: 25px;
@@ -841,6 +832,7 @@ span.category-title {
 .slider-controls i {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 10px;
   height: 10px;
   margin-left: 10px;
@@ -1081,6 +1073,7 @@ a.popular {
   line-height: 18px;
   font-weight: 700;
   text-transform: uppercase;
+  vertical-align: middle;
   color: #ffffff;
   background-color: #ee3643;
   position: relative;
@@ -1099,6 +1092,10 @@ a.popular {
   height: 0;
   border: 18px solid #ffffff;
   border-left-color: #ee3643;
+}
+
+.catalog-item-title+.price {
+  margin-top: 28px;
 }
 
 .popular-brand {
@@ -1170,18 +1167,19 @@ li.brand:nth-child(4n) {
   color: #000000;
   text-transform: uppercase;
   text-align: left;
-  padding-top: 41px;
+  padding: 41px 20px 0 0;
 }
 
 .service p {
+  width: 400px;
   color: #000000;
+  margin-bottom: 67px;
 }
 
 .service-wrap {
   position: relative;
   width: 940px;
-  margin-top: 67px;
-  margin-bottom: 100px;
+  display: flex;
 }
 
 ul.service-slider {
@@ -1226,7 +1224,6 @@ ul.service-slider::after {
   background-color: #293449;
 }
 
-
 .service li:active,
 li.active-service {
   color: #32425c;
@@ -1237,12 +1234,9 @@ li.active-service {
 
 .service-slide {
   display: none;
-  position: absolute;
-  top: -2px;
-  left: 317px;
   width: 620px;
-  min-height: 300px;
-  z-index: 3;
+  padding-left: 80px;
+  padding-bottom: 124px;
   overflow: hidden;
 }
 
@@ -1257,21 +1251,21 @@ li.active-service {
 .service-slide:nth-child(1) {
   background-image: url(../img/delivery-car.png);
   background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-position: 231px 26px;
   background-size: 468px 261px;
 
 }
 
 .service-slide:nth-child(2) {
   background-image: url(../img/warranty.png);
-  background-position: 100% 50%;
+  background-position: 320px 1px;
   background-repeat: no-repeat;
   background-size: 389px 283px;
 }
 
 .service-slide:nth-child(3) {
   background-image: url(../img/credit.png);
-  background-position: 100% 50%;
+  background-position: 231px 3px;
   background-repeat: no-repeat;
   background-size: 465px 285px;
 }
@@ -1291,8 +1285,15 @@ li.active-service {
   margin: 0;
 }
 
-.credit button {
+.credit a {
   display: block;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ee3643;
   margin-top: 28px;
   width: 195px;
   padding: 10px 0;
@@ -1306,7 +1307,7 @@ li.active-service {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 87px;
+  margin-bottom: 85px;
 }
 
 .left-block {
@@ -1323,7 +1324,7 @@ li.active-service {
   text-align: left;
 }
 
-.information p {
+.left-block p {
   text-align: left;
   color: #000000;
   margin-bottom: 23px;
@@ -1336,7 +1337,7 @@ li.active-service {
   text-align: left;
   color: #000000;
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 19px;
   padding: 0;
   list-style: none;
 }
@@ -1365,7 +1366,9 @@ li.active-service {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 12px 40px 10px;
+  display: block;
+  width: 220px;
+  padding: 10px 0;
   border-radius: 3px;
   background-color: #ee3643;
 }
@@ -1374,22 +1377,33 @@ li.active-service {
   width: 300px;
 }
 
-.mini-map {
-  margin-top: -15px;
+.right-block p {
+  width: 180px;
+  padding-bottom: 20px;
 }
 
-.right-block button {
+.right-block .btn {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 13px 58px 8px 64px;
+  display: block;
+  padding: 11px 0;
   width: 300px;
-  margin-top: 31px;
+  margin-top: 30px;
   border-radius: 3px;
   background-color: #ee3643;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
 }
 
 .breadcrumbs-wrap {
@@ -1614,7 +1628,6 @@ label.max-price {
 
 .check-input {
   position: absolute;
-  visibility: hidden;
 }
 
 .check-box {
@@ -1628,15 +1641,19 @@ label.max-price {
   left: 0;
 }
 
+.check-input:hover+.check-box,
+.check-input:focus+.check-box,
+.check-input:active+.check-box {
+  background-image: url(../img/checkbox-off-focus.svg);
+}
+
 .check-input:checked+.check-box {
   background-image: url(../img/checkbox-on.svg);
 }
 
-.check-input:focus+.check-box {
-  background-image: url(../img/checkbox-off-focus.svg);
-}
-
-.check-input:checked:focus+.check-box {
+.check-input:checked:hover+.check-box,
+.check-input:checked:focus+.check-box,
+.check-input:checked:active+.check-box {
   background-image: url(../img/checkbox-on-focus.svg);
 }
 
@@ -1658,7 +1675,6 @@ label.max-price {
 
 .radio-input {
   position: absolute;
-  visibility: hidden;
 }
 
 .radio {
@@ -1672,14 +1688,16 @@ label.max-price {
   left: 0;
 }
 
-.radio-input:checked+.radio {
-  background-image: url(../img/radio-on.svg);
-}
-
+.radio-input:hover+.radio,
 .radio-input:focus+.radio {
   background-image: url(../img/radio-off-focus.svg);
 }
 
+.radio-input:checked+.radio {
+  background-image: url(../img/radio-on.svg);
+}
+
+.radio-input:checked:hover+.radio,
 .radio-input:checked:focus+.radio {
   background-image: url(../img/radio-on-focus.svg);
 }
@@ -1788,14 +1806,15 @@ a.active {
 
 a.sort-up {
   display: inline-block;
+  vertical-align: middle;
   width: 20px;
   height: 20px;
   border: none;
-
 }
 
 a.sort-down {
   display: inline-block;
+  vertical-align: middle;
   width: 20px;
   height: 20px;
   border: none;
@@ -1939,6 +1958,7 @@ a.sort-down {
   font-weight: 400;
   color: #000000;
   text-transform: none;
+
 }
 
 .feedback-wrap input[type="text"],
@@ -2079,6 +2099,7 @@ a.sort-down {
 .modal-btn-wrap .cart-btn,
 .modal-btn-wrap .back-btn {
   display: inline-block;
+  vertical-align: middle;
   width: 220px;
   padding: 10px 0;
   border-radius: 3px;
@@ -2155,7 +2176,7 @@ a.sort-down {
 }
 
 .left-column p {
-  padding: 11px 1px 0 3px;
+  padding: 11px 40px 0 3px;
 }
 
 .right-column {
@@ -2254,9 +2275,10 @@ a.sort-down {
   align-content: center;
 }
 
-.copyright {
-  padding-top: 23px;
-  width: 280px;
+p.copyright {
+  margin-top: 35px;
+  margin-right: 45px;
+  width: 235px;
 }
 
 .footer-social {
@@ -2271,7 +2293,7 @@ a.sort-down {
 }
 
 .footer-social li {
-  margin-left: 5px;
+  margin-left: 2px;
   margin-top: 35px;
 }
 
@@ -2303,12 +2325,12 @@ a.sort-down {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  width: 320px;
+  width: 310px;
 
 }
 
 .footer-contacts {
-  padding-left: 22px;
+  padding-left: 12px;
 }
 
 .footer-copyright {

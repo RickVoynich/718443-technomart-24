@@ -947,10 +947,6 @@ a.popular {
   color: #000000;
 }
 
-.catalog-item-title span {
-  text-transform: uppercase;
-}
-
 .popular-product-item .actions,
 .catalog-item .actions {
   position: absolute;
